@@ -54,7 +54,7 @@ all_student = all_student.astype(int)
 score = all_student.sum(axis = 1)
 
 
-score.to_csv(f'{n}_grades.txt', header = False)
+score.to_csv(f'Output/{n}_grades.txt', header = False)
 print('Mean (average) score: {:.2f}'.format(score.mean()))
 print('Highest score:', score.max())
 print('Lowest score:', score.min())
