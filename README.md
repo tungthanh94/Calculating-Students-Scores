@@ -17,4 +17,4 @@ Each line contains the student's ID and his/her score.
 The file name will be depend on the input. For example, if the input file name is 'class1.txt', the output file will be 'class1_grades.txt'
 
 # How to run
-Just put the input file in the `Data Files` folder, run the program file, then enter class name.
+Just put the input file in the `Data Files` folder, run the `lastname_firstname_grade_the_exams.py` file, then enter class name.
