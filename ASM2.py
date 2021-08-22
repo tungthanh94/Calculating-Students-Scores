@@ -1,19 +1,19 @@
 import numpy as np
 import pandas as pd
 
+#Load file
 file = None
 while file is None:
     try:
         
-        n = input('Enter a class to grade (i.e. class1 for class1.txt): ')
-              
-        file = open(f'Data Files/{n}.txt', 'r')
-        
+        n = input('Enter a class to grade (i.e. class1 for class1.txt): ')             
+        file = open(f'Data Files/{n}.txt', 'r')       
         print(f'Successfully opened {n}.txt\n')
         print('**** ANALYZING ****\n')
     except:
         print('File cannot be found.\nPlease try again!')
 
+#Check line validity
 invalid = 0
 valid_line =[]
 for i in file:
@@ -28,8 +28,7 @@ for i in file:
         print('Invalid line of data: N# is invalid')
         print(i, '\n')
         invalid += 1
-    else:
-        
+    else:      
         valid_line.append(line)
         
 
@@ -40,7 +39,7 @@ print('**** REPORT ****\n')
 print('Total valid lines of data:', len(valid_line))
 print('Total invalid lines of data:', invalid, '\n')
 
-
+#create a Data Frame to store valid students scores
 all_student = pd.DataFrame(valid_line)
 all_student.set_index(0, inplace = True)
 all_student.index.name = None
